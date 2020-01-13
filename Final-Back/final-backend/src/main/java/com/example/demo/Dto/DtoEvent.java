@@ -1,6 +1,9 @@
 package com.example.demo.Dto;
 
 public class DtoEvent {
+
+
+
     private String nameDto;
     private Integer durationDto;
     private String descriptionDto;
@@ -27,6 +30,7 @@ public class DtoEvent {
     public void setCityDto(String cityDto) {
         this.cityDto = cityDto;
     }
+
 
     public String getNameDto() {
         return nameDto;
@@ -91,4 +95,7 @@ public class DtoEvent {
     public void setNameCategotyDto(String nameCategotyDto) {
         this.nameCategotyDto = nameCategotyDto;
     }
+
+
+
 }

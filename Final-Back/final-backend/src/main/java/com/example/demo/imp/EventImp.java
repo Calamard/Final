@@ -15,6 +15,11 @@ import com.example.demo.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+import java.util.Optional;
+
+
+
 @Service
 public class EventImp implements EventService {
     @Autowired
@@ -31,6 +36,7 @@ public class EventImp implements EventService {
         Category cat = null;
 
         try{
+
             Event ValidateName = everepo.findByName(events.getNameDto());
             Place ValidateCity = plarepo.findByCity(events.getNamePlaceDto());
             Category ValidateCat = catrepo.findByCat(events.getNameCategotyDto());
@@ -81,13 +87,16 @@ public class EventImp implements EventService {
         }catch (EventExistException ex) {
             ex.printStackTrace();
             throw new EventExistException(ex.getMessage());
+
         }catch(Exception e){
             e.printStackTrace();
             throw new Exception(Constant.ERROR_SISTEMA);
 
         }
+
         return eve;
     }
+
 
 
 
@@ -96,7 +105,9 @@ public class EventImp implements EventService {
         Boolean delete = false;
         try{
             Event buscarEvent = everepo.findByName(name);
+
             if(buscarEvent != null){
+
                 everepo.delete(buscarEvent);
                 return delete = true;
             }
