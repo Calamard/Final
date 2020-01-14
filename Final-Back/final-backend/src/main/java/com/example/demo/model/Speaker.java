@@ -16,7 +16,7 @@ public class Speaker {
     @Column(name="DESCRIPTION", nullable = false)
     private String description;
 
-    @Column(name="CHANGE", nullable = false)
+    @Column(name="CHARGE", nullable = false)
     private String change;
 
     @ManyToOne
