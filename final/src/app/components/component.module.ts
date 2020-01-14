@@ -15,7 +15,7 @@ import { GraficoComponent } from './grafico/grafico.component';
   declarations: [ 
 
     NavbarComponent,
-    GraficoComponent
+    GraficoComponent,
   ],
     
   exports:[
