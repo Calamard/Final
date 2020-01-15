@@ -14,6 +14,7 @@ import { SiginUpComponent } from './pages/sigin-up/sigin-up.component';
 import { WeventComponent } from './pages/wevent/wevent.component';
 import { ComponentModule } from './components/component.module';
 import { EventformComponent } from './pages/eventform/eventform.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
       { enableTracing: true }),
       FormsModule,
       ReactiveFormsModule,
-      ComponentModule
+      ComponentModule,
+      BrowserAnimationsModule
   
   ],
   providers: [],

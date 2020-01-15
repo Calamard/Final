@@ -13,9 +13,28 @@
                 <label for="exampleFormControlTextarea1">Descripción del evento</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-              <input [matDatepicker]="myDatepicker">
-              <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
-              <mat-datepicker #myDatepicker></mat-datepicker>
+              <label for="exampleFormControlTextarea2">Dirección donde será el evento</label>
+
+  <form>
+  <div class="form-row">
+    <div class="col-7">
+      <div class="md-form">
+        <input mdbInput type="text" class="form-control" placeholder="Ciudad">
+      </div>
+    </div>
+    <div class="col">
+      <div class="md-form">
+        <input mdbInput type="text" class="form-control" placeholder="Región">
+      </div>
+    </div>
+    <div class="col">
+      <div class="md-form">
+        <input mdbInput type="text" class="form-control" placeholder="Dirección">
+      </div>
+    </div>
+  </div>
+</form>
+
                 <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Crear</button>
            </form>
       </div>
