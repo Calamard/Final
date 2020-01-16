@@ -14,6 +14,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 
 
 
+
 @NgModule({
   declarations: [ 
 
@@ -22,12 +23,13 @@ import { CarouselComponent } from './carousel/carousel.component';
     CarouselComponent,
     
     
+    
   ],
     
   exports:[
     GraficoComponent,
     NavbarComponent,
-    CarouselComponent
+    
   ],
   imports: [
     CommonModule,
