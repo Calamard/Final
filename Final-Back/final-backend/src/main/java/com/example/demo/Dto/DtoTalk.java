@@ -1,11 +1,14 @@
 package com.example.demo.Dto;
 
-import javax.persistence.Column;
-import com.example.demo.Dto.DtoEvent;
 public class DtoTalk {
     private String nameDto;
     private String descriptionDto;
     private Integer durationDto;
+
+    private String nameSpeakerDto;
+    private String descripSpeakerDto;
+    private String chargeSpeakerDto;
+    private String countrySpeakerDto;
 
     private String nameSalonDto;
     private Integer capSalonDto;
@@ -15,6 +18,7 @@ public class DtoTalk {
     private String adressPlaceDto;
 
     private String nameCategoryDto;
+
 
     public String getNameDto() {
         return nameDto;
@@ -86,5 +90,37 @@ public class DtoTalk {
 
     public void setNameCategoryDto(String nameCategoryDto) {
         this.nameCategoryDto = nameCategoryDto;
+    }
+
+    public String getNameSpeakerDto() {
+        return nameSpeakerDto;
+    }
+
+    public void setNameSpeakerDto(String nameSpeakerDto) {
+        this.nameSpeakerDto = nameSpeakerDto;
+    }
+
+    public String getDescripSpeakerDto() {
+        return descripSpeakerDto;
+    }
+
+    public void setDescripSpeakerDto(String descripSpeakerDto) {
+        this.descripSpeakerDto = descripSpeakerDto;
+    }
+
+    public String getChargeSpeakerDto() {
+        return chargeSpeakerDto;
+    }
+
+    public void setChargeSpeakerDto(String changeSpeakerDto) {
+        this.chargeSpeakerDto = changeSpeakerDto;
+    }
+
+    public String getCountrySpeakerDto() {
+        return countrySpeakerDto;
+    }
+
+    public void setCountrySpeakerDto(String countrySpeakerDto) {
+        this.countrySpeakerDto = countrySpeakerDto;
     }
 }
