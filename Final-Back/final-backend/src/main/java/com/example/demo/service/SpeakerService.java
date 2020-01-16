@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface SpeakerService {
-    Speaker saveSpeaker (DtoSpeaker Speakers) throws Exception;
+
+    Speaker crearOrador(DtoSpeaker sspeaker)throws Exception;
+    Boolean eliminarOrador(Long id) throws Exception;
 
 }
