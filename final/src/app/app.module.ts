@@ -15,6 +15,7 @@ import { WeventComponent } from './pages/wevent/wevent.component';
 import { ComponentModule } from './components/component.module';
 import { EventformComponent } from './pages/eventform/eventform.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateComponent } from './create/create.component';
 
 
 
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     SiginUpComponent,
     WeventComponent,
     EventformComponent,
+    CreateComponent,
  
    
   ],
