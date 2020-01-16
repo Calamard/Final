@@ -1,0 +1,73 @@
+package com.example.demo.model;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table (name="COUNTRY")
+public class Country {
+    @Id
+    @Column(name="ID",nullable = false , unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name="NAME",nullable = false)
+    private String name;
+
+<<<<<<< HEAD:final-backend/src/main/java/com/example/demo/model/Country.java
+=======
+/*
+>>>>>>> 3c7b11c2d9a6265e92d78cbd44c640f79caa2d25:Final-Back/final-backend/src/main/java/com/example/demo/model/Country.java
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+
+    private List<Place> placeList;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+    private List<Speaker> speakerList;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+    private List<User> userList;
+
+ public List<Place> getPlaceList() {
+        return placeList;
+    }
+
+    public void setPlaceList(List<Place> placeList) {
+        this.placeList = placeList;
+    }
+
+    public List<Speaker> getSpeakerList() {
+        return speakerList;
+    }
+
+    public void setSpeakerList(List<Speaker> speakerList) {
+        this.speakerList = speakerList;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+}
