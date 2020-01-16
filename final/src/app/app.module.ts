@@ -12,6 +12,9 @@ import { StartComponent } from './pages/start/start.component';
 import { SiginUpComponent } from './pages/sigin-up/sigin-up.component';
 import { WeventComponent } from './pages/wevent/wevent.component';
 import { ComponentModule } from './components/component.module';
+import { EventformComponent } from './pages/eventform/eventform.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateComponent } from './create/create.component';
 
 
 
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'inicio', component: StartComponent },
   { path: 'sigin-up',component: SiginUpComponent},
   { path: 'wevent',component: WeventComponent},
+  { path: 'eventform',component:EventformComponent},
   {
     path: 'home',
     component: HomeComponent,
@@ -47,6 +51,8 @@ const appRoutes: Routes = [
     StartComponent,
     SiginUpComponent,
     WeventComponent,
+    EventformComponent,
+    CreateComponent,
  
    
   ],
@@ -57,7 +63,8 @@ const appRoutes: Routes = [
       { enableTracing: true }),
       FormsModule,
       ReactiveFormsModule,
-      ComponentModule
+      ComponentModule,
+      BrowserAnimationsModule
   
   ],
   providers: [],
