@@ -1,14 +1,11 @@
 package com.example.demo.imp;
 
 import com.example.demo.Dto.DtoTalk;
-import com.example.demo.model.Event;
+import com.example.demo.model.Category;
 import com.example.demo.model.SalonRoom;
 import com.example.demo.model.Speaker;
 import com.example.demo.model.Talk;
-import com.example.demo.repository.EventRepository;
-import com.example.demo.repository.SalonRoomRepository;
-import com.example.demo.repository.SpeakRepository;
-import com.example.demo.repository.TalkRepository;
+import com.example.demo.repository.*;
 import com.example.demo.service.TalkService;
 import com.example.demo.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +16,7 @@ public class TalkImp implements TalkService {
     @Autowired
     private TalkRepository talkRepo;
     @Autowired
-    private EventRepository eventRepo;
+    private CategoryRepository catRepo;
     @Autowired
     private SpeakRepository speakRepo;
     @Autowired
@@ -27,28 +24,24 @@ public class TalkImp implements TalkService {
 
     @Override
     public Talk createTalk(DtoTalk talk) throws Exception {
-        /*Talk tk = null;
-        Event eve = null;
+        Talk tk = null;
+        Category cat = null;
         Speaker spkr = null;
         SalonRoom srm = null;
         try{
-            Talk validarName = talkRepo.finByname(talk.getNameDto());
-            Event validarEvent = eventRepo.findByName(talk.getNameEventDto());
-            Speaker validarSpeaker = speakRepo.findByname(talk.getNameSpeakerDto());
-            if(validarName == null && validarEvent == null && validarSpeaker == null){
+            Talk validateName = talkRepo.finByname(talk.getNameDto());
+            Category validateCategory = catRepo.findByCat(talk.getNameCategoryDto());
+            Speaker validateSpeaker = speakRepo.findByname(talk.getNameSpeakerDto());
+            SalonRoom validateSaloon = salonRepo.findByName(talk.getNameSalonDto());
+            if(validateName == null && validateCategory == null && validateSpeaker == null){
 
-                eve = new Event();
-                eve.setName(talk.getNameEventDto());
-                eve.setDuration(talk.getDurationEventDto());
-                eve.setDescription(talk.getDescrpEventDto());
-                eve.setTime(talk.getTimeEventDto());
-                eve.setDate(talk.getDateEventDto());
-                eve.setCapacity(talk.getCapEventDto());
-                eve = eventRepo.save(eve);
+                cat = new Category();
+                cat.setName(talk.getNameCategoryDto());
+
 
                 spkr = new Speaker();
                 spkr.setName(talk.getNameSpeakerDto());
-                spkr.setDescription(talk.getDescrpSpeakerDto());
+                spkr.setDescription(talk.getDescripSpeakerDto());
                 spkr.setChange(talk.getChargeSpeakerDto());
                 spkr = speakRepo.save(spkr);
 
@@ -61,24 +54,18 @@ public class TalkImp implements TalkService {
                 tk.setName(talk.getNameDto());
                 tk.setDescription(talk.getDescriptionDto());
                 tk.setDuration(talk.getDurationDto());
-                tk.setEvent(eve);
+                tk.setCategory(cat);
                 tk.setSpeakers(spkr);
                 tk.setSalon(srm);
                 tk = talkRepo.save(tk);
 
             }
-            if(validarName == null && validarEvent == null && validarSpeaker != null){
+            if(validateName == null && validateCategory == null && validateSpeaker != null){
 
-                eve = new Event();
-                eve.setName(talk.getNameEventDto());
-                eve.setDuration(talk.getDurationEventDto());
-                eve.setDescription(talk.getDescrpEventDto());
-                eve.setTime(talk.getTimeEventDto());
-                eve.setDate(talk.getDateEventDto());
-                eve.setCapacity(talk.getCapEventDto());
-                eve = eventRepo.save(eve);
+                cat = new Category();
+                cat.setName(talk.getNameCategoryDto());
 
-                spkr = validarSpeaker;
+                spkr = validateSpeaker;
 
                 srm = new SalonRoom();
                 srm.setName(talk.getNameSalonDto());
@@ -89,19 +76,20 @@ public class TalkImp implements TalkService {
                 tk.setName(talk.getNameDto());
                 tk.setDescription(talk.getDescriptionDto());
                 tk.setDuration(talk.getDurationDto());
-                tk.setEvent(eve);
+                tk.setCategory(cat);
                 tk.setSpeakers(spkr);
                 tk.setSalon(srm);
                 tk = talkRepo.save(tk);
 
             }
-            if(validarName == null && validarEvent != null && validarSpeaker == null){
+            if(validateName == null && validateCategory != null && validateSpeaker == null){
 
-                eve = validarEvent;
+                cat = new Category();
+                cat.setName(talk.getNameCategoryDto());
 
                 spkr = new Speaker();
                 spkr.setName(talk.getNameSpeakerDto());
-                spkr.setDescription(talk.getDescrpSpeakerDto());
+                spkr.setDescription(talk.getDescripSpeakerDto());
                 spkr.setChange(talk.getChargeSpeakerDto());
                 spkr = speakRepo.save(spkr);
 
@@ -114,17 +102,17 @@ public class TalkImp implements TalkService {
                 tk.setName(talk.getNameDto());
                 tk.setDescription(talk.getDescriptionDto());
                 tk.setDuration(talk.getDurationDto());
-                tk.setEvent(eve);
+                tk.setCategory(cat);
                 tk.setSpeakers(spkr);
                 tk.setSalon(srm);
                 tk = talkRepo.save(tk);
 
             }
-            if(validarName == null && validarEvent != null && validarSpeaker != null){
+            if(validateName == null && validateCategory != null && validateSpeaker != null){
 
-                eve = validarEvent;
+                cat = validateCategory;
 
-                spkr = validarSpeaker;
+                spkr = validateSpeaker;
 
                 srm = new SalonRoom();
                 srm.setName(talk.getNameSalonDto());
@@ -135,7 +123,7 @@ public class TalkImp implements TalkService {
                 tk.setName(talk.getNameDto());
                 tk.setDescription(talk.getDescriptionDto());
                 tk.setDuration(talk.getDurationDto());
-                tk.setEvent(eve);
+                tk.setCategory(cat);
                 tk.setSpeakers(spkr);
                 tk.setSalon(srm);
                 tk = talkRepo.save(tk);
@@ -146,7 +134,7 @@ public class TalkImp implements TalkService {
         }catch(Exception e){
             e.printStackTrace();
             throw new Exception(Constant.ERROR_SISTEMA);
-        }*/
+        }
         return null;
     }
 
