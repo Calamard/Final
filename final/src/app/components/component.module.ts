@@ -9,7 +9,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { GraficoComponent } from './grafico/grafico.component';
-
+import { CarouselComponent} from './carousel/carousel.component';
 import { CreateeventformComponent } from './createeventform/createeventform.component';
 
 
@@ -21,7 +21,7 @@ import { CreateeventformComponent } from './createeventform/createeventform.comp
 
     NavbarComponent,
     GraficoComponent,
-
+    CarouselComponent,
     CreateeventformComponent,
 
   ],
@@ -29,7 +29,7 @@ import { CreateeventformComponent } from './createeventform/createeventform.comp
   exports:[
     GraficoComponent,
     NavbarComponent,
-
+    CarouselComponent,
     CreateeventformComponent,
 
   ],
