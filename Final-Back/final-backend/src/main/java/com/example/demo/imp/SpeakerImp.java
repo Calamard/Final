@@ -1,9 +1,5 @@
-package com.example.demo.imp;
 
-import com.example.demo.Dto.DtoSpeaker;
-import com.example.demo.model.Speaker;
-import com.example.demo.repository.SpeakRepository;
-import com.example.demo.service.SpeakerService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,4 +24,5 @@ public class SpeakerImp implements SpeakerService {
     public Boolean eliminarOrador(Long id) throws Exception {
         return null;
     }
+
 }

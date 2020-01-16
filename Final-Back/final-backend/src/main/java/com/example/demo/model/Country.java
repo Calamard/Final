@@ -14,7 +14,10 @@ public class Country {
     @Column(name="NAME",nullable = false)
     private String name;
 
+<<<<<<< HEAD:final-backend/src/main/java/com/example/demo/model/Country.java
+=======
 /*
+>>>>>>> 3c7b11c2d9a6265e92d78cbd44c640f79caa2d25:Final-Back/final-backend/src/main/java/com/example/demo/model/Country.java
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
 
     private List<Place> placeList;
@@ -49,7 +52,7 @@ public class Country {
         this.userList = userList;
     }
 
- */
+
     public long getId() {
         return id;
     }
