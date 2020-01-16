@@ -6,17 +6,15 @@ public class DtoTalk {
     private String nameDto;
     private String descriptionDto;
     private Integer durationDto;
-    private String nameEventDto;
-    private Integer durationEventDto;
-    private String descrpEventDto;
-    private  String timeEventDto;
-    private String dateEventDto;
-    private Integer capEventDto;
-    private String nameSpeakerDto;
-    private String descrpSpeakerDto;
-    private String chargeSpeakerDto;
+
     private String nameSalonDto;
     private Integer capSalonDto;
+
+    private String namePlaceDto;
+    private String cityPlaceDto;
+    private String adressPlaceDto;
+
+    private String nameCategoryDto;
 
     public String getNameDto() {
         return nameDto;
@@ -42,78 +40,6 @@ public class DtoTalk {
         this.durationDto = durationDto;
     }
 
-    public String getNameEventDto() {
-        return nameEventDto;
-    }
-
-    public void setNameEventDto(String nameEventDto) {
-        this.nameEventDto = nameEventDto;
-    }
-
-    public Integer getDurationEventDto() {
-        return durationEventDto;
-    }
-
-    public void setDurationEventDto(Integer durationEventDto) {
-        this.durationEventDto = durationEventDto;
-    }
-
-    public String getDescrpEventDto() {
-        return descrpEventDto;
-    }
-
-    public void setDescrpEventDto(String descrpEventDto) {
-        this.descrpEventDto = descrpEventDto;
-    }
-
-    public String getTimeEventDto() {
-        return timeEventDto;
-    }
-
-    public void setTimeEventDto(String timeEventDto) {
-        this.timeEventDto = timeEventDto;
-    }
-
-    public String getDateEventDto() {
-        return dateEventDto;
-    }
-
-    public void setDateEventDto(String dateEventDto) {
-        this.dateEventDto = dateEventDto;
-    }
-
-    public Integer getCapEventDto() {
-        return capEventDto;
-    }
-
-    public void setCapEventDto(Integer capEventDto) {
-        this.capEventDto = capEventDto;
-    }
-
-    public String getNameSpeakerDto() {
-        return nameSpeakerDto;
-    }
-
-    public void setNameSpeakerDto(String nameSpeakerDto) {
-        this.nameSpeakerDto = nameSpeakerDto;
-    }
-
-    public String getDescrpSpeakerDto() {
-        return descrpSpeakerDto;
-    }
-
-    public void setDescrpSpeakerDto(String descrpSpeakerDto) {
-        this.descrpSpeakerDto = descrpSpeakerDto;
-    }
-
-    public String getChargeSpeakerDto() {
-        return chargeSpeakerDto;
-    }
-
-    public void setChargeSpeakerDto(String chargeSpeakerDto) {
-        this.chargeSpeakerDto = chargeSpeakerDto;
-    }
-
     public String getNameSalonDto() {
         return nameSalonDto;
     }
@@ -128,5 +54,37 @@ public class DtoTalk {
 
     public void setCapSalonDto(Integer capSalonDto) {
         this.capSalonDto = capSalonDto;
+    }
+
+    public String getNamePlaceDto() {
+        return namePlaceDto;
+    }
+
+    public void setNamePlaceDto(String namePlaceDto) {
+        this.namePlaceDto = namePlaceDto;
+    }
+
+    public String getCityPlaceDto() {
+        return cityPlaceDto;
+    }
+
+    public void setCityPlaceDto(String cityPlaceDto) {
+        this.cityPlaceDto = cityPlaceDto;
+    }
+
+    public String getAdressPlaceDto() {
+        return adressPlaceDto;
+    }
+
+    public void setAdressPlaceDto(String adressPlaceDto) {
+        this.adressPlaceDto = adressPlaceDto;
+    }
+
+    public String getNameCategoryDto() {
+        return nameCategoryDto;
+    }
+
+    public void setNameCategoryDto(String nameCategoryDto) {
+        this.nameCategoryDto = nameCategoryDto;
     }
 }

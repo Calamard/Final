@@ -27,7 +27,7 @@ public class TalkImp implements TalkService {
 
     @Override
     public Talk createTalk(DtoTalk talk) throws Exception {
-        Talk tk = null;
+        /*Talk tk = null;
         Event eve = null;
         Speaker spkr = null;
         SalonRoom srm = null;
@@ -146,7 +146,7 @@ public class TalkImp implements TalkService {
         }catch(Exception e){
             e.printStackTrace();
             throw new Exception(Constant.ERROR_SISTEMA);
-        }
+        }*/
         return null;
     }
 
