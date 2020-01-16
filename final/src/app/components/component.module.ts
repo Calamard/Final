@@ -29,6 +29,7 @@ import { CarouselComponent } from './carousel/carousel.component';
   exports:[
     GraficoComponent,
     NavbarComponent,
+    CarouselComponent,
     
   ],
   imports: [
