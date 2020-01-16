@@ -10,23 +10,19 @@ export class GraficoComponent implements OnDestroy{
   results: any[] =
     [
       {
-        "name": "Menores a 18 años",
+        "name": "Mujeres entre 18 y 30",
         "value": 20
       },
       {
-        "name": "Entre 18 y 27 años",
+        "name": "Hombres entre 18 y 30",
         "value": 30
       },
       {
-        "name": "Entre 28 y 40 años",
+        "name": "Mujeres mayor de 30",
         "value": 15
       },
       {
-        "name": "Entre 41 y 60 años",
-        "value": 15
-      },
-      {
-        "name": "Entre 60 y más años",
+        "name": "Hombres mayor de 30",
         "value": 15
       }
     ];

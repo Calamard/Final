@@ -21,8 +21,8 @@ public class Talk {
     private Integer duration;
 
     @ManyToOne
-    @JoinColumn(name = "FK_EVENT", nullable = false)
-    private Event event;
+    @JoinColumn(name = "FK_CATEGORY", nullable = false)
+    private Category category;
 
     @ManyToOne
     @JoinColumn(name = "FK_SPEAKER", nullable = false)
@@ -65,12 +65,12 @@ public class Talk {
         this.duration = duration;
     }
 
-    public Event getEvent() {
-        return event;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setEvent(Event event) {
-        this.event = event;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Speaker getSpeakers() {

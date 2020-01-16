@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'usuario', component: UsuarioComponent },
   { path: 'event', component: EventComponent }, 
-  { path: 'adminstrador', component: AdminComponent },
+  { path: 'admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'inicio', component: StartComponent },
   { path: 'sigin-up',component: SiginUpComponent},
