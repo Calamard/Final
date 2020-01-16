@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80c23821-4bde-4682-b3cd-7f443f9ef6e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/imp/SpeakerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/imp/SpeakerImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Speaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Speaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/SpeakRepository.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/Dto/DtoTalk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/controller/TalkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/imp/TalkImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/service/TalkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/app/components/carousel/carousel.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/app/components/carousel/carousel.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/app/components/carousel/carousel.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/app/components/carousel/carousel.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/model/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/model/Talk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/repository/SpeakRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/repository/SpeakRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/repository/TalkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final-Back/final-backend/src/main/java/com/example/demo/repository/TalkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/components/component.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/components/component.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/components/grafico/grafico.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/components/grafico/grafico.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/pages/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/pages/admin/admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/pages/event/event.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/pages/event/event.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/pages/usuario/usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/pages/usuario/usuario.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../final/src/app/pages/wevent/wevent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../final/src/app/pages/wevent/wevent.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

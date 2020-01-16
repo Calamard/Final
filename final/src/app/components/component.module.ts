@@ -7,6 +7,9 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { CarouselComponent } from './carousel/carousel.component';
+
+
 
 
 
@@ -15,12 +18,16 @@ import { GraficoComponent } from './grafico/grafico.component';
   declarations: [ 
 
     NavbarComponent,
-    GraficoComponent
+    GraficoComponent,
+    CarouselComponent,
+    
+    
   ],
     
   exports:[
     GraficoComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
