@@ -1,0 +1,44 @@
+.container{
+    width: 100px;
+     height: 100px;
+     position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.container2{
+    margin-top: 20%;
+   padding-left: 10px;
+   position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.form-control{
+    width: 450px;
+    margin-top: 0px;
+}
+
+.btn-success{
+    position: absolute;
+    top: 580px;
+    left: 350px;
+    width: 200px;
+}
+.text{
+    border: aqua 2px;
+    display: block;
+    position: absolute;
+    left: 200px;
+    top:400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    padding: 5px;
+    width: 100%;
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    margin-left: 15%;
+}
+.img2{
+    margin-left:17% ;
+}
