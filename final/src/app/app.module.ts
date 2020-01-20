@@ -15,7 +15,7 @@ import { ComponentModule } from './components/component.module';
 import { EventformComponent } from './pages/eventform/eventform.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateComponent } from './create/create.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -53,7 +53,7 @@ const appRoutes: Routes = [
     WeventComponent,
     EventformComponent,
     CreateComponent,
- 
+    HttpClientModule
    
   ],
   imports: [
