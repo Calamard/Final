@@ -15,7 +15,7 @@ import { ComponentModule } from './components/component.module';
 import { EventformComponent } from './pages/eventform/eventform.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateComponent } from './create/create.component';
-import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from './pages/category/category.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +28,9 @@ const appRoutes: Routes = [
   { path: 'sigin-up',component: SiginUpComponent},
   { path: 'wevent',component: WeventComponent},
   { path: 'eventform',component:EventformComponent},
+  { path: 'categories',component:CategoryComponent},
+
+  
   {
     path: 'home',
     component: HomeComponent,
@@ -53,7 +56,7 @@ const appRoutes: Routes = [
     WeventComponent,
     EventformComponent,
     CreateComponent,
-    HttpClientModule
+    CategoryComponent
    
   ],
   imports: [
