@@ -20,16 +20,20 @@ public class Talk {
     @Column(name = "DURATION",nullable = false)
     private Integer duration;
 
-    @ManyToOne
-    @JoinColumn(name = "FK_CATEGORY", nullable = false)
-    private Category category;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "FK_EVENT", nullable = false)
+    private Event event;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "FK_SPEAKER", nullable = false)
     private Speaker speakers;
 
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "FK_CATEGORY", nullable = false)
+    private Category categories;
 
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "FK_SALON_ROOM", nullable = false)
     private SalonRoom  salon;
 
@@ -65,12 +69,12 @@ public class Talk {
         this.duration = duration;
     }
 
-    public Category getCategory() {
-        return category;
+    public Event getEvent() {
+        return event;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setEvent(Event event) {
+        this.event = event;
     }
 
     public Speaker getSpeakers() {
@@ -88,4 +92,16 @@ public class Talk {
     public void setSalon(SalonRoom salon) {
         this.salon = salon;
     }
+
+    public Category getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Category categories) {
+        this.categories = categories;
+    }
+    /*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */
 }

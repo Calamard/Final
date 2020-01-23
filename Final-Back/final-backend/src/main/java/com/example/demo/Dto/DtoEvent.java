@@ -1,94 +1,42 @@
 package com.example.demo.Dto;
 
+import java.util.Date;
+
 public class DtoEvent {
-    private String nameDto;
-    private Integer durationDto;
-    private String descriptionDto;
-    private String timeDto;
-    private String dateDto;
-    private String adressDto;
-    private Integer capacityDto;
-    private String cityDto;
-    private String namePlaceDto;
-    private String nameCategotyDto;
 
-    public String getAdressDto() {
-        return adressDto;
+    //event
+    private String nameEventDto;
+
+    private String descriptionEventDto;
+    private Date dateEventDto;
+
+    public String getNameEventDto() {
+        return nameEventDto;
     }
 
-    public void setAdressDto(String adressDto) {
-        this.adressDto = adressDto;
+    public void setNameEventDto(String nameEventDto) {
+        this.nameEventDto = nameEventDto;
     }
 
-    public String getCityDto() {
-        return cityDto;
+
+
+    public String getDescriptionEventDto() {
+        return descriptionEventDto;
     }
 
-    public void setCityDto(String cityDto) {
-        this.cityDto = cityDto;
+    public void setDescriptionEventDto(String descriptionEventDto) {
+        this.descriptionEventDto = descriptionEventDto;
     }
 
-    public String getNameDto() {
-        return nameDto;
+    public Date getDateEventDto() {
+        return dateEventDto;
     }
 
-    public void setNameDto(String nameDto) {
-        this.nameDto = nameDto;
+    public void setDateEventDto(Date dateEventDto) {
+        this.dateEventDto = dateEventDto;
     }
-
-    public Integer getDurationDto() {
-        return durationDto;
-    }
-
-    public void setDurationDto(Integer durationDto) {
-        this.durationDto = durationDto;
-    }
-
-    public String getDescriptionDto() {
-        return descriptionDto;
-    }
-
-    public void setDescriptionDto(String descriptionDto) {
-        this.descriptionDto = descriptionDto;
-    }
-
-    public String getTimeDto() {
-        return timeDto;
-    }
-
-    public void setTimeDto(String timeDto) {
-        this.timeDto = timeDto;
-    }
-
-    public String getDateDto() {
-        return dateDto;
-    }
-
-    public void setDateDto(String dateDto) {
-        this.dateDto = dateDto;
-    }
-
-    public Integer getCapacityDto() {
-        return capacityDto;
-    }
-
-    public void setCapacityDto(Integer capacityDto) {
-        this.capacityDto = capacityDto;
-    }
-
-    public String getNamePlaceDto() {
-        return namePlaceDto;
-    }
-
-    public void setNamePlaceDto(String namePlaceDto) {
-        this.namePlaceDto = namePlaceDto;
-    }
-
-    public String getNameCategotyDto() {
-        return nameCategotyDto;
-    }
-
-    public void setNameCategotyDto(String nameCategotyDto) {
-        this.nameCategotyDto = nameCategotyDto;
-    }
+    /*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */
 }
