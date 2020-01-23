@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
 
     @Id
-    @Column(name="ID")
+    @Column(name="ID", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -40,20 +40,6 @@ public class User {
     @JoinColumn(name = "FK_COUNTRY", nullable = false)
     private Country country;
 
-/*
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users",fetch = FetchType.LAZY)
-    private List<UserEvent> userEventList;
-
-        public List<UserEvent> getUserEventList() {
-        return userEventList;
-    }
-
-    public void setUserEventList(List<UserEvent> userEventList) {
-        this.userEventList = userEventList;
-    }
-
- */
 
 
     public Long getId() {
@@ -127,4 +113,8 @@ public class User {
     public void setCountry(Country country) {
         this.country = country;
     }
+    /*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */
 }

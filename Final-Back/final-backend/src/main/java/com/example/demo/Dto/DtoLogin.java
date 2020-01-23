@@ -12,7 +12,7 @@ public class DtoLogin {
     private String emailDto;
     private String passwordDto;
     private String countryDto;
-    private String typeDto;
+
 
     public String getNameDto() {
         return nameDto;
@@ -76,12 +76,9 @@ public class DtoLogin {
         this.countryDto = countryDto;
     }
 
-    public String getTypeDto() {
-        return typeDto;
-    }
 
-    public void setTypeDto(String typeDto) {
-        this.typeDto = typeDto;
-    }
-
+    /*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */
 }

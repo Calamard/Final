@@ -1,6 +1,9 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -8,58 +11,21 @@ import java.util.List;
 public class Event {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID",nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "DURATION")
-    private Integer duration;
 
-    @Column(name = "DESCRIPTION")
+    @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
-    @Column(name = "TIME")
-    private String time;
-
     @Column(name = "DATE")
-    private String date;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date date;
 
-    @Column(name = "CAPACITY")
-    private Integer capacity;
-
-    @ManyToOne
-    @JoinColumn(name = "FK_PLACES", nullable = false, updatable = false)
-    private Place place;
-
-    @OneToOne
-    @JoinColumn(name = "FK_CATEGORY", nullable = false)
-    private Category fkCategory;
-
-/*
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private List<Talk> talkList;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private List<UserEvent> userEventList;
-
-        public List<Talk> getTalkList() {
-        return talkList;
-    }
-
-    public void setTalkList(List<Talk> talkList) {
-        this.talkList = talkList;
-    }
-
-    public List<UserEvent> getUserEventList() {
-        return userEventList;
-    }
-
-    public void setUserEventList(List<UserEvent> userEventList) {
-        this.userEventList = userEventList;
-    }
- */
 
     public Long getId() {
         return id;
@@ -77,13 +43,7 @@ public class Event {
         this.name = name;
     }
 
-    public Integer getDuration() {
-        return duration;
-    }
 
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
 
     public String getDescription() {
         return description;
@@ -93,48 +53,16 @@ public class Event {
         this.description = description;
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
-
-    public Integer getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
-    }
-
-    public Place getPlace() {
-        return place;
-    }
-
-    public void setPlace(Place place) {
-        this.place = place;
-    }
-
-    public Category getFkCategory() {
-        return fkCategory;
-    }
-
-    public void setFkCategory(Category fkCategory) {
-        this.fkCategory = fkCategory;
-    }
-
-
-
-
+    /*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */
 }
 

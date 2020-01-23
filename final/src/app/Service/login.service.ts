@@ -18,23 +18,28 @@ export class LoginService {
   };
   constructor(private http:HttpClient) { }
   
-  public login (name:string , last:string, rut:string,genre:string,age:number,type:string,email:string,password:string, country:string){
+  public login (age:number, country:string, email:string, genre:string, last:string, name:string ,password:string, rut:string ){
       let body ={
-        nameDto:name,
-        lastNameDto:last,
-        rutDto:rut,
-        genreDto:genre,
         ageDto:age,
-        typeDto:type,
-
-        emailDto:email,
-        passwordDto:password,
-
         contryDto:country,
+        emailDto:email,
+        genreDto:genre,
+        lastNameDto:last,
+        nameDto:name,
+        passwordDto:password,
+        rutDto:rut,
+        
+        
+    
+
+        
+        
+
+        
         
          
       }
-      return this.http.POST("http://localhost:8090/swagger-ui.html#/login-controller/crearUsuaioUsingPOST",body,this.headersOptions)
+      return this.http.post("http://localhost:8090/api/v2/login/create",body,this.headersOptions)
   }
 }
 

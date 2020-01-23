@@ -7,5 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SalonRoomRepository extends JpaRepository<SalonRoom, Long> {
     SalonRoom findByid(SalonRoom salones);
-    SalonRoom findByName(String nameDto);
+    SalonRoom findByName(String name);
 }
+/*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */

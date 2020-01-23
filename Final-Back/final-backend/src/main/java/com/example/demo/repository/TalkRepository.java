@@ -7,5 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TalkRepository extends JpaRepository<Talk,Long> {
     Talk findByid(Long id);
-    Talk finByname(String name);
+    Talk findByName(String name);
 }
+/*
+Giovanna Tapia
+giovannatss27@gmail.com
+ */

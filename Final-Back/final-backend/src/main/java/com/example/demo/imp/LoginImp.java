@@ -1,14 +1,14 @@
 package com.example.demo.imp;
 
 
+import com.example.demo.Dto.DtoDeleteLogin;
 import com.example.demo.Dto.DtoLogin;
-import com.example.demo.exception.EdadNoPermitidaException;
-import com.example.demo.exception.MailExisteException;
-import com.example.demo.exception.NoEncontradoException;
-import com.example.demo.exception.UsuarioExistenteException;
+import com.example.demo.Dto.DtoSession;
+import com.example.demo.exception.*;
 import com.example.demo.model.Country;
 import com.example.demo.model.Login;
 import com.example.demo.model.User;
+import com.example.demo.model.UserEvent;
 import com.example.demo.repository.CountryRepository;
 import com.example.demo.repository.LoginRepository;
 import com.example.demo.repository.UserRepository;
@@ -19,7 +19,10 @@ import com.example.demo.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.TreeMap;
 
 
 @Service
@@ -35,7 +38,7 @@ public class LoginImp implements LoginService {
     private CountryRepository countRepo;
 
     @Override
-    public Login crearUsuario(DtoLogin dtoLogin) throws Exception {
+    public Login createUser(DtoLogin dtoLogin) throws Exception {
 
         Login log = null;
         User use = null;
@@ -53,11 +56,11 @@ public class LoginImp implements LoginService {
                 log = new Login();
                 log.setEmail(dtoLogin.getEmailDto());
                 log.setPassword(dtoLogin.getPasswordDto());
-                log = loginRepo.save(log);
+                loginRepo.save(log);
 
                 cou = new Country();
                 cou.setName(dtoLogin.getCountryDto());
-                cou = countRepo.save(cou);
+                countRepo.save(cou);
 
                 use = new User();
                 use.setRut(dtoLogin.getRutDto());
@@ -65,10 +68,12 @@ public class LoginImp implements LoginService {
                 use.setLastName(dtoLogin.getLastNameDto());
                 use.setAge(dtoLogin.getAgeDto());
                 use.setGenre(dtoLogin.getGenreDto());
-                use.setType(dtoLogin.getTypeDto());
+                use.setType("comun");
                 use.setCountry(cou);
                 use.setLogin(log);
-                use=userRepo.save(use);
+
+
+                userRepo.save(use);
 
                 log.setUser(use);
                 return log;
@@ -79,7 +84,7 @@ public class LoginImp implements LoginService {
                 log = new Login();
                 log.setEmail(dtoLogin.getEmailDto());
                 log.setPassword(dtoLogin.getPasswordDto());
-                log = loginRepo.save(log);
+                loginRepo.save(log);
 
                 cou = validarPais;
 
@@ -89,20 +94,21 @@ public class LoginImp implements LoginService {
                 use.setLastName(dtoLogin.getLastNameDto());
                 use.setAge(dtoLogin.getAgeDto());
                 use.setGenre(dtoLogin.getGenreDto());
-                use.setType(dtoLogin.getTypeDto());
+                use.setType("comun");
                 use.setCountry(cou);
                 use.setLogin(log);
-                use=userRepo.save(use);
+
+                userRepo.save(use);
 
                 log.setUser(use);
                 return log;
             }
-            if (validarMail != null && validarRut == null) {
-                throw new MailExisteException(Constant.ERROR_MAIL_EXISTE);
+        if (validarMail != null && validarRut == null) {
+            throw new MailExisteException(Constant.ERROR_MAIL_EXISTE);
         }
-            if (validarMail != null && validarRut != null){
-                throw new UsuarioExistenteException(Constant.ERROR_USUARIO_CREADO);
-            }
+        else {
+            throw new UsuarioExistenteException(Constant.ERROR_USUARIO_CREADO);
+        }
         }catch (EdadNoPermitidaException ex) {
             ex.printStackTrace();
             throw new EdadNoPermitidaException(ex.getMessage());
@@ -118,34 +124,65 @@ public class LoginImp implements LoginService {
         }
 
 
-        return log;
     }
 
     @Override
-    public Boolean eliminarUsuario(Long id) throws Exception {
+    public Boolean deleteUser(DtoDeleteLogin delete) throws Exception {
         Boolean elimi = false;
         try {
 
-            Optional<User> buscarUser = userRepo.findById(id);
-            Login buscarMail =  loginRepo.findByEmail(buscarUser.get().getLogin().getEmail());
-            if (buscarMail != null) {
+            User buscarUser = userRepo.findByid(delete.getIdDelete());
+            Login buscarMail =  loginRepo.findByEmail(buscarUser.getLogin().getEmail());
+
+
+            if (buscarMail != null && buscarMail.getPassword() == delete.getPassDelete()) {
+
                 loginRepo.delete(buscarMail);
-                userRepo.delete(buscarUser.get());
+                userRepo.delete(buscarUser);
                 return elimi = true;
+            }
+            if (buscarMail != null && buscarMail.getPassword() != delete.getPassDelete()) {
+                throw new IncorrectException(Constant.ERROR_INCORRECTO);
             }
             if(buscarMail== null){
                 throw new NoEncontradoException(Constant.ERROR_NO_ENCONTRADO);
             }
-
+        }catch (IncorrectException ex) {
+            ex.printStackTrace();
+            throw new IncorrectException(ex.getMessage());
         }catch (NoEncontradoException ex) {
             ex.printStackTrace();
             throw new NoEncontradoException(ex.getMessage());
         }catch (Exception ex){
             ex.printStackTrace();
+            throw new Exception(Constant.ERROR_SISTEMA);
         }
         return elimi;
     }
+
+    @Override
+    public Boolean session(DtoSession dto) throws Exception {
+        Boolean valido = false;
+        try{
+            Login validarmail = loginRepo.findByEmail(dto.getEmailD());
+            if((validarmail.getPassword()) == (dto.getPassD())){
+                return valido = true;
+            }
+            if((validarmail.getPassword()) != (dto.getPassD())){
+                throw new IncorrectException(Constant.ERROR_INCORRECTO);
+            }
+
+        }catch (IncorrectException ex) {
+            ex.printStackTrace();
+            throw new IncorrectException(ex.getMessage());
+        }catch (Exception ex){
+            ex.printStackTrace();
+            throw new Exception(Constant.ERROR_SISTEMA);
+        }
+        return null;
+    }
 /*
 Giovanna Tapia
+giovannatss27@gmail.com
  */
 }
