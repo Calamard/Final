@@ -1,21 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { UsuarioComponent } from './pages/usuario/usuario.component';
-import { EventComponent } from './pages/event/event.component';
-import { AdminComponent } from './pages/admin/admin.component';
-import { LoginComponent } from './pages/login/login.component';
-import { StartComponent } from './pages/start/start.component';
-import { SiginUpComponent } from './pages/sigin-up/sigin-up.component';
-import { WeventComponent } from './pages/wevent/wevent.component';
-import { ComponentModule } from './components/component.module';
-import { EventformComponent } from './pages/eventform/eventform.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { ComponentModule } from './components/component.module';
 import { CreateComponent } from './create/create.component';
+import { AdminComponent } from './pages/admin/admin.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { EventComponent } from './pages/event/event.component';
+import { EventformComponent } from './pages/eventform/eventform.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SiginUpComponent } from './pages/sigin-up/sigin-up.component';
+import { StartComponent } from './pages/start/start.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { WeventComponent } from './pages/wevent/wevent.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -67,7 +68,9 @@ const appRoutes: Routes = [
       FormsModule,
       ReactiveFormsModule,
       ComponentModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      HttpClientModule
+
   
   ],
   providers: [],
