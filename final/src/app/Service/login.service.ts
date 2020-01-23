@@ -18,7 +18,5 @@ export class LoginService {
   };
   constructor(private http:HttpClient) { }
   
-  public login (name:string , lastNameDto:string,){
       
-}
 }
