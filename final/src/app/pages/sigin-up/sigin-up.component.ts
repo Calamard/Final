@@ -25,8 +25,34 @@ export class SiginUpComponent implements OnInit {
   ngOnInit() {
   }
 
+  nameeKeyup(value: string) {
+    this.name = value;
+  }
+  lastKeyup(value: string) {
+    this.last = value;
+  }
+  rutKeyup(value: string) {
+    this.rut = value;
+  }
+  genreKeyup(value: string) {
+    this.genre = value;
+  }
+  ageKeyup(value: number) {
+    this.age = value;
+  }
+  emailKeyup(value: string) {
+    this.email = value;
+  }
+  passKeyup(value: string) {
+    this.password = value;
+  }
+  countryKeyup(value: string) {
+    this.country = value;
+  }
+  
+
   creatteUser(){
-    this.loginService.login(this.name, this.last, this.rut, this.genre ,this.age, this.type, this.email,this.password, this.country).subscribe(
+    this.loginService.login( this.age,this.country, this.email,this.genre , this.last, this.name, this.password,  this.rut).subscribe(
       data => {
         console.log(data);
       },
