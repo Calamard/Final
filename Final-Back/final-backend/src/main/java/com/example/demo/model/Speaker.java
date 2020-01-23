@@ -17,7 +17,9 @@ public class Speaker {
     private String description;
 
     @Column(name="CHARGE", nullable = false)
-    private String charge;
+
+    private String change;
+
 
     @ManyToOne
     @JoinColumn(name = "FK_COUNTRY", nullable = false)
