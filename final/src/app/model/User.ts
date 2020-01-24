@@ -1,4 +1,12 @@
+import { Login } from './Login';
+
 export interface User {
-    nameDto: string;
+    name:string;
+    lastname:string;
+    genre:string;
+    rut:string;
+    age:number;
+    type:string;
+    id_login:Login;
     
 }

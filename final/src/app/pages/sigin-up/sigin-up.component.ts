@@ -10,7 +10,8 @@ import { LoginService } from 'src/app/Service/login.service';
 })
 
 export class SiginUpComponent implements OnInit {
-  name: string;
+
+  name:String;
   last:string;
   rut:string;
   genre:string;
@@ -25,40 +26,40 @@ export class SiginUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  nameeKeyup(value: string) {
+  nameKeyup(value:String) {
     this.name = value;
   }
-  lastKeyup(value: string) {
+  lastKeyup(value:string) {
     this.last = value;
   }
-  rutKeyup(value: string) {
+  rutKeyup(value:string) {
     this.rut = value;
   }
-  genreKeyup(value: string) {
+  genreKeyup(value:string) {
     this.genre = value;
   }
-  ageKeyup(value: number) {
+  ageKeyup(value:number) {
     this.age = value;
   }
-  emailKeyup(value: string) {
+  emailKeyup(value:string) {
     this.email = value;
   }
-  passKeyup(value: string) {
+  passKeyup(value:string) {
     this.password = value;
   }
-  countryKeyup(value: string) {
+  countryKeyup(value:string) {
     this.country = value;
   }
   
 
   creatteUser(){
-    this.loginService.login( this.age,this.country, this.email,this.genre , this.last, this.name, this.password,  this.rut).subscribe(
+    this.loginService.create( this.age,this.country, this.email,this.genre , this.last, this.name, this.password,  this.rut).subscribe(
       data => {
-        console.log(data);
+        console.log('data');
       },
       error => {
-        console.log(error)
-        alert(error)
+        console.log('error')
+        alert('error')
       }
     )
   }

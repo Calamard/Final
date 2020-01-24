@@ -38,29 +38,27 @@ public class LoginImp implements LoginService {
     private CountryRepository countRepo;
 
     @Override
-    public Login createUser(DtoLogin dtoLogin) throws Exception {
-
+    public Boolean createUser(DtoLogin dtoLogin) throws Exception {
+        Boolean create =false;
         Login log = null;
         User use = null;
         Country cou = null;
 
         try{
-            Login validarMail = loginRepo.findByEmail(dtoLogin.getEmailDto());
-            User validarRut = userRepo.findByRut(dtoLogin.getRutDto());
-            Country validarPais = countRepo.findByName(dtoLogin.getCountryDto());
+            Login validaMail = loginRepo.findByEmail(dtoLogin.getEmailDto());
+            User validaRut = userRepo.findByRut(dtoLogin.getRutDto());
+            Country validaPais = countRepo.findByName(dtoLogin.getCountryDto());
 
-            if(validarRut == null && validarMail == null && validarPais == null) {
-                if((dtoLogin.getAgeDto() )< 13 || (dtoLogin.getAgeDto()) > 120){
-                    throw new EdadNoPermitidaException(Constant.ERROR_EDAD);
-                }
+            if(validaRut == null && validaMail == null && validaPais == null) {
+
                 log = new Login();
                 log.setEmail(dtoLogin.getEmailDto());
                 log.setPassword(dtoLogin.getPasswordDto());
-                loginRepo.save(log);
+
 
                 cou = new Country();
                 cou.setName(dtoLogin.getCountryDto());
-                countRepo.save(cou);
+
 
                 use = new User();
                 use.setRut(dtoLogin.getRutDto());
@@ -74,19 +72,21 @@ public class LoginImp implements LoginService {
 
 
                 userRepo.save(use);
+                loginRepo.save(log);
+                countRepo.save(cou);
 
                 log.setUser(use);
-                return log;
+                return create =true;
 
             }
 
-            if(validarRut == null && validarMail == null && validarPais != null){
+            if(validaRut == null && validaMail == null && validaPais != null){
                 log = new Login();
                 log.setEmail(dtoLogin.getEmailDto());
                 log.setPassword(dtoLogin.getPasswordDto());
                 loginRepo.save(log);
 
-                cou = validarPais;
+                cou = validaPais;
 
                 use = new User();
                 use.setRut(dtoLogin.getRutDto());
@@ -101,17 +101,15 @@ public class LoginImp implements LoginService {
                 userRepo.save(use);
 
                 log.setUser(use);
-                return log;
+                return create =true;
             }
-        if (validarMail != null && validarRut == null) {
-            throw new MailExisteException(Constant.ERROR_MAIL_EXISTE);
-        }
-        else {
-            throw new UsuarioExistenteException(Constant.ERROR_USUARIO_CREADO);
-        }
-        }catch (EdadNoPermitidaException ex) {
-            ex.printStackTrace();
-            throw new EdadNoPermitidaException(ex.getMessage());
+            if (validaMail != null && validaRut == null) {
+                throw new MailExisteException(Constant.ERROR_MAIL_EXISTE);
+            }
+            else {
+                throw new UsuarioExistenteException(Constant.ERROR_USUARIO_CREADO);
+            }
+
         }catch (MailExisteException ex) {
             ex.printStackTrace();
             throw new MailExisteException(ex.getMessage());

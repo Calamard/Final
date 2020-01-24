@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Login } from '../model/Login';
+
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,26 +21,17 @@ export class LoginService {
   };
   constructor(private http:HttpClient) { }
   
-  public login (age:number, country:string, email:string, genre:string, last:string, name:string ,password:string, rut:string ){
+  public create (age:number, country:string, email:string, genre:string, last:string, name:String ,password:string, rut:string ){
       let body ={
-        ageDto:age,
-        contryDto:country,
-        emailDto:email,
-        genreDto:genre,
-        lastNameDto:last,
-        nameDto:name,
-        passwordDto:password,
-        rutDto:rut,
-        
-        
-    
 
-        
-        
-
-        
-        
-         
+        "ageDto": age,
+        "contryDto": country,
+        "emailDto": email,
+        "genreDto": genre,
+        "lastNameDto": last,
+        "nameDto": name,
+        "passwordDto": password,
+        "rutDto": rut
       }
       return this.http.post("http://localhost:8090/api/v2/login/create",body,this.headersOptions)
   }

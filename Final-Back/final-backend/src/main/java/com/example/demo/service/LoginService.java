@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface LoginService {
 
-    Login createUser(DtoLogin logins) throws Exception;
+    Boolean createUser(DtoLogin logins) throws Exception;
     Boolean deleteUser(DtoDeleteLogin delete) throws Exception;
     Boolean session(DtoSession dto) throws Exception;
 }
