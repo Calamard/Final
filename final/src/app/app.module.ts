@@ -16,6 +16,9 @@ import { ComponentModule } from './components/component.module';
 import { EventformComponent } from './pages/eventform/eventform.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateComponent } from './create/create.component';
+import { TalkformComponent } from './pages/talkform/talkform.component';
+
+
 
 
 
@@ -29,6 +32,8 @@ const appRoutes: Routes = [
   { path: 'sigin-up',component: SiginUpComponent},
   { path: 'wevent',component: WeventComponent},
   { path: 'eventform',component:EventformComponent},
+  { path: 'talkform',component:TalkformComponent},
+
   {
     path: 'home',
     component: HomeComponent,
@@ -54,6 +59,9 @@ const appRoutes: Routes = [
     WeventComponent,
     EventformComponent,
     CreateComponent,
+    TalkformComponent,
+  
+    
  
    
   ],
