@@ -10,7 +10,6 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { EventComponent } from './pages/event/event.component';
 import { EventformComponent } from './pages/eventform/eventform.component';
-import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SiginUpComponent } from './pages/sigin-up/sigin-up.component';
 import { StartComponent } from './pages/start/start.component';
@@ -19,10 +18,10 @@ import { WeventComponent } from './pages/wevent/wevent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TalkformComponent } from './pages/talkform/talkform.component';
 import { SpeakerformComponent } from './pages/speakerform/speakerform.component';
+import { SalonformComponent } from './pages/salonform/salonform.component';
 
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'usuario', component: UsuarioComponent },
   { path: 'event', component: EventComponent }, 
   { path: 'admin', component: AdminComponent },
@@ -34,14 +33,15 @@ const appRoutes: Routes = [
   { path: 'categories',component:CategoryComponent},
   { path: 'talkform',component:TalkformComponent},
   { path: 'speakerform',component:SpeakerformComponent},
+  { path: 'salonform',component:SalonformComponent},
   
   {
-    path: 'home',
-    component: HomeComponent,
-    data: { title: 'home' }
+    path: 'event',
+    component: EventComponent,
+    data: { title: 'event' }
   },
   { path: '**',
-    redirectTo: '/home',
+    redirectTo: '/event',
     pathMatch: 'full'
   },
   
@@ -50,7 +50,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     UsuarioComponent,
     EventComponent,
     AdminComponent,
@@ -62,7 +61,8 @@ const appRoutes: Routes = [
     CreateComponent,
     CategoryComponent,
     TalkformComponent,
-    SpeakerformComponent
+    SpeakerformComponent,
+    SalonformComponent
    
   ],
   imports: [
