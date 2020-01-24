@@ -18,6 +18,7 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { WeventComponent } from './pages/wevent/wevent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TalkformComponent } from './pages/talkform/talkform.component';
+import { SpeakerformComponent } from './pages/speakerform/speakerform.component';
 
 
 const appRoutes: Routes = [
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'eventform',component:EventformComponent},
   { path: 'categories',component:CategoryComponent},
   { path: 'talkform',component:TalkformComponent},
+  { path: 'speakerform',component:SpeakerformComponent},
   
   {
     path: 'home',
@@ -59,7 +61,8 @@ const appRoutes: Routes = [
     EventformComponent,
     CreateComponent,
     CategoryComponent,
-    TalkformComponent
+    TalkformComponent,
+    SpeakerformComponent
    
   ],
   imports: [
