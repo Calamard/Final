@@ -12,21 +12,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="NAME", nullable = false)
+    @Column(name="NAME")
     private String name;
 
-    @Column(name="LAST_NAME",nullable = false)
+    @Column(name="LAST_NAME")
     private String lastName;
 
-    @Column(name = "RUT",nullable = false)
+    @Column(name = "RUT")
     private String rut;
 
 
 
-    @Column(name ="AGE", nullable = false)
+    @Column(name ="AGE")
     private Integer age;
 
-    @Column(name= "GENRE",nullable = false)
+    @Column(name= "GENRE")
     private String genre;
 
     @Column(name="TYPE", nullable = false)

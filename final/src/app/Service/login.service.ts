@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class LoginService {
+export class LoginService{
   private headersOptions = {
     headers: {
         'Content-Type': 'application/json',
@@ -21,17 +21,16 @@ export class LoginService {
   };
   constructor(private http:HttpClient) { }
   
-  public create (age:number, country:string, email:string, genre:string, last:string, name:String ,password:string, rut:string ){
+  public create (age:number, country:string, email:string, genre:string, last:string, nam:string ,password:string, rut:string ){
       let body ={
-
-        "ageDto": age,
-        "contryDto": country,
-        "emailDto": email,
-        "genreDto": genre,
-        "lastNameDto": last,
-        "nameDto": name,
-        "passwordDto": password,
-        "rutDto": rut
+        "ageDto":age,
+        "countryDto":country,
+        "emailDto":email,
+        "genreDto":genre,
+        "lastNameDto":last,
+        "nameDto":nam,
+        "passwordDto":password,
+        "rutDto":rut
       }
       return this.http.post("http://localhost:8090/api/v2/login/create",body,this.headersOptions)
   }

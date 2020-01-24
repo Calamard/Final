@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/Service/login.service';
+import { LoginService } from 'src/app/Service/Login.service';
+import { Router } from '@angular/router';
 
 @Component({
 
@@ -10,7 +11,8 @@ import { LoginService } from 'src/app/Service/login.service';
 })
 
 export class SiginUpComponent implements OnInit {
-  name:string;
+
+  nam:string;
   last:string;
   rut:string;
   genre:string;
@@ -19,13 +21,15 @@ export class SiginUpComponent implements OnInit {
   password:string;
   country:string;
   
-  constructor(private loginService: LoginService) { }
+  constructor(
+    private router:Router,
+    private loginServices:LoginService) { }
 
   ngOnInit() {
   }
 
   nameeKeyup(value:string) {
-    this.name = value;
+    this.nam = value;
   }
   lastKeyup(value:string) {
     this.last = value;
@@ -51,15 +55,18 @@ export class SiginUpComponent implements OnInit {
   
 
   creatteUser(){
-    this.loginService.create (this.age,this.country, this.email,this.genre , this.last, this.name, this.password, this.rut).subscribe(
-      data => {
-        console.log(data);
-      },
-      error => {
-        console.log(error)
-        alert(error)
+
+    let obs =  this.loginServices.create(this.age,this.country, this.email,this.genre , this.last, this.nam, this.password, this.rut);
+    obs.subscribe(validation  => {
+      if(validation) {
+        alert('login successful')
+        this.router.navigate(['/login']);
+      } else {
+        alert('error')
       }
-    )
+    });
+
+    
   }
 
 }

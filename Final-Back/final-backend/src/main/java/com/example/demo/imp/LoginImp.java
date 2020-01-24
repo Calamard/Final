@@ -54,11 +54,11 @@ public class LoginImp implements LoginService {
                 log = new Login();
                 log.setEmail(dtoLogin.getEmailDto());
                 log.setPassword(dtoLogin.getPasswordDto());
-
+                loginRepo.save(log);
 
                 cou = new Country();
                 cou.setName(dtoLogin.getCountryDto());
-
+                countRepo.save(cou);
 
                 use = new User();
                 use.setRut(dtoLogin.getRutDto());
@@ -72,8 +72,8 @@ public class LoginImp implements LoginService {
 
 
                 userRepo.save(use);
-                loginRepo.save(log);
-                countRepo.save(cou);
+
+
 
                 log.setUser(use);
                 return create =true;
@@ -163,12 +163,16 @@ public class LoginImp implements LoginService {
         Boolean valido = false;
         try{
             Login validarmail = loginRepo.findByEmail(dto.getEmailD());
-            if((validarmail.getPassword()) == (dto.getPassD())){
+            String pass = validarmail.getPassword();
+            String passdto = dto.getPassD();
+            if( pass.equals(passdto)){
                 return valido = true;
             }
-            if((validarmail.getPassword()) != (dto.getPassD())){
+            if( !pass.equals(passdto)){
                 throw new IncorrectException(Constant.ERROR_INCORRECTO);
             }
+
+            throw new IncorrectException(Constant.ERROR_INCORRECTO);
 
         }catch (IncorrectException ex) {
             ex.printStackTrace();
@@ -177,7 +181,7 @@ public class LoginImp implements LoginService {
             ex.printStackTrace();
             throw new Exception(Constant.ERROR_SISTEMA);
         }
-        return null;
+
     }
 /*
 Giovanna Tapia
