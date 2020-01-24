@@ -1,1 +1,37 @@
-<p>createspeaker works!</p>
+<div class="container col-xl-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Create Speaker</h3>
+        </div>
+          <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Description</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="">Position</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Country</label>
+                    <select name="Country" class="form-control">
+                        <option value="eve1" selected >Country 1</option>
+                        <option value="eve2">Country 2</option>
+                        <option value="eve3">Country 3</option>
+                        <option value="eve4">Country 4</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Create</button>
+                </div> 
+            </form>
+          </div>
+    </div>
+  </div>
