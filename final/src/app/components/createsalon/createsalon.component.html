@@ -1,1 +1,57 @@
-<p>createsalon works!</p>
+<div class="container col-xl-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Create SalonRoom</h3>
+        </div>
+          <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Capacity</label>
+                  <input type="number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Place</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Adress</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-row">
+                    
+                    <div class="col-4">
+                        <label for="exampleFormControlTextarea2">Country</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="exampleFormControlTextarea2">City</label>
+                    </div>
+                    
+                </div>            
+                <div class="form-row">   
+                    <div class="col-4">
+                        <select name="Country" class="form-control">
+                            <option value="eve1" selected >Country 1</option>
+                            <option value="eve2">Country 2</option>
+                            <option value="eve3">Country 3</option>
+                            <option value="eve4">Country 4</option>
+                          </select>
+                    </div>
+                    <div class="col-4">
+                        <select name="City" class="form-control">
+                            <option value="eve1" selected >City 1</option>
+                            <option value="eve2">City 2</option>
+                            <option value="eve3">City 3</option>
+                            <option value="eve4">City 4</option>
+                          </select>
+                    </div>                   
+                </div> 
+                <br>
+                  <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Create</button>
+            </form>
+          </div>
+    </div>
+  </div>
