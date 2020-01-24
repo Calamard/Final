@@ -8,21 +8,22 @@
     </div>
     <div class="col-4" ></div>
     <h2>Sigin up</h2>
+
     <div class="col-6"></div>
     <div class="col-4"></div>
     <div class="form-row">
-            <div class="col">
-                <label for="name" style="margin: 50px;">Name</label>
-                <input (keyup)="nameKeyup($event.target.value)" type="text" class="form-control" id="name" placeholder="name">
-            </div>
-            <div class="col">
-                <label for="lastname" style="margin: 50px;">LastName</label>
-                <input (keyup)="lastKeyup($event.target.value)" type="text" class="form-control" id="lastname" placeholder="lastname">
-            </div>
-            <div class="col">
-                <label for="country" style="margin: 50px;">Country</label>
-                <input (keyup)="countryKeyup($event.target.value)" type="text" class="form-control" id="country" placeholder="country">
-            </div>
+        <div class="col">
+         <label for="name" style="margin: 50px;">Name</label>
+         <input (keyup)="nameKeyup($event.target.value)" type="text" class="form-control" id="name" placeholder="name">
+        </div>
+        <div class="col">
+         <label for="lastname" style="margin: 50px;">LastName</label>
+         <input (keyup)="lastKeyup($event.target.value)" type="text" class="form-control" id="lastname" placeholder="lastname">
+        </div>
+        <div class="col">
+         <label for="country" style="margin: 50px;">Country</label>
+         <input (keyup)="countryKeyup($event.target.value)" type="text" class="form-control" id="country" placeholder="country">
+        </div>
             
     </div>
 
@@ -43,23 +44,23 @@
             <input (keyup)="rutKeyup($event.target.value)" type="text" class="form-control" id="rut" placeholder="12.345.678-4">
         </div>
         
-</div>
-<div class="col-12"></div>
-<div class="col-4"></div>
-    
-    <div class="form-row">
-            <div class="col">
-                <label for="email" style="margin: 50px;">Email</label>
-                <input type="email" class="form-control" id="email" (keyup)="emailKeyup($event.target.value)" placeholder="email@example.com">
-            </div>
-            <div class="col">
-                <label for="password" style="margin: 50px;">Pasword</label>
-                <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="password" placeholder="xxxxxxx">
-            </div>
     </div>
     <div class="col-12"></div>
     <div class="col-4"></div>
-    <button (click)="creatteUser()" class="btn btn-primary">Registrar</button>
+    
+    <div class="form-row">
+        <div class="col">
+         <label for="email" style="margin: 50px;">Email</label>
+         <input type="email" class="form-control" id="email" (keyup)="emailKeyup($event.target.value)" placeholder="email@example.com">
+        </div>
+        <div class="col">
+         <label for="password" style="margin: 50px;">Pasword</label>
+         <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="password" placeholder="xxxxxxx">
+        </div>
+    </div>
+    <div class="col-12"></div>
+    <div class="col-4"></div>
+    <button (click)="creatteUser()" class="btn btn-primary" style="margin: 15px">Registrar</button>
     <a href="http://localhost:4200/login"><button type="submit" class="btn btn-primary" style="margin: 15px;">Login</button></a>
 </div>
    
