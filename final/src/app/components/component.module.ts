@@ -13,6 +13,7 @@ import { CarouselComponent} from './carousel/carousel.component';
 import { CreateeventformComponent } from './createeventform/createeventform.component';
 import { CreatetalkComponent } from './createtalk/createtalk.component';
 import { CreatespeakerComponent } from './createspeaker/createspeaker.component';
+import { CreatesalonComponent } from './createsalon/createsalon.component';
 
 
 
@@ -29,6 +30,7 @@ import { CreatespeakerComponent } from './createspeaker/createspeaker.component'
     CreateeventformComponent,
     CreatetalkComponent,
     CreatespeakerComponent,
+    CreatesalonComponent,
     
     
 
@@ -41,6 +43,7 @@ import { CreatespeakerComponent } from './createspeaker/createspeaker.component'
     CreateeventformComponent,
     CreatetalkComponent,
     CreatespeakerComponent,
+    CreatesalonComponent,
     
 
   ],
