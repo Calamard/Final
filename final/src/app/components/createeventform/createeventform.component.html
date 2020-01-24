@@ -3,7 +3,7 @@
       <div class="card-header">
           <h3>Create your event</h3>
       </div>
-      <div class="card-body">
+        <div class="card-body">
           <form action="">
               <div class="form-group">
                   <label for="">Title</label>
@@ -13,30 +13,20 @@
                 <label for="exampleFormControlTextarea1">Description</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-              <label for="exampleFormControlTextarea2">Address</label>
+              <label for="exampleFormControlTextarea2">Date</label>
 
-  <form>
-  <div class="form-row">
-    <div class="col-7">
-      <div class="md-form">
-        <input mdbInput type="text" class="form-control" placeholder="Dirección">
-      </div>
-    </div>
-    <div class="col">
-      <div class="md-form">
-        <input mdbInput type="text" class="form-control" placeholder="Ciudad">
-      </div>
-    </div>
-    <div class="col">
-      <div class="md-form">
-        <input mdbInput type="text" class="form-control" placeholder="Región">
-      </div>
-    </div>
-  </div>
-</form>
-
+                <form>
+                  <div class="form-row">
+                   <div class="col-7">
+                     <div class="md-form">
+                       <input mdbInput type="date" class="form-control">
+                     </div>
+                    </div>
+                    
+                  </div>    
+                </form>
                 <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Create</button>
-                <button id="btncreate1" (click)="hidebutton()" class="btn btn-danger" style="margin-left:auto;">Botonescondido</button> <input type="text" (keyup)="permiso($event.target.value)">
-           </form>
-      </div>
+          </form>
+        </div>
   </div>
+</div>

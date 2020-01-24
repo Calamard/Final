@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { CarouselComponent} from './carousel/carousel.component';
 import { CreateeventformComponent } from './createeventform/createeventform.component';
+import { CreatetalkComponent } from './createtalk/createtalk.component';
 
 
 
@@ -23,6 +24,7 @@ import { CreateeventformComponent } from './createeventform/createeventform.comp
     GraficoComponent,
     CarouselComponent,
     CreateeventformComponent,
+    CreatetalkComponent,
 
   ],
     
@@ -31,6 +33,7 @@ import { CreateeventformComponent } from './createeventform/createeventform.comp
     NavbarComponent,
     CarouselComponent,
     CreateeventformComponent,
+    CreatetalkComponent,
 
   ],
   imports: [
