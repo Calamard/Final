@@ -10,13 +10,11 @@ import { LoginService } from 'src/app/Service/login.service';
 })
 
 export class SiginUpComponent implements OnInit {
-
-  name:String;
+  name:string;
   last:string;
   rut:string;
   genre:string;
   age:number;
-  type:string;
   email:string;
   password:string;
   country:string;
@@ -26,7 +24,7 @@ export class SiginUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  nameKeyup(value:String) {
+  nameeKeyup(value:string) {
     this.name = value;
   }
   lastKeyup(value:string) {
@@ -53,13 +51,13 @@ export class SiginUpComponent implements OnInit {
   
 
   creatteUser(){
-    this.loginService.create( this.age,this.country, this.email,this.genre , this.last, this.name, this.password,  this.rut).subscribe(
+    this.loginService.create (this.age,this.country, this.email,this.genre , this.last, this.name, this.password, this.rut).subscribe(
       data => {
-        console.log('data');
+        console.log(data);
       },
       error => {
-        console.log('error')
-        alert('error')
+        console.log(error)
+        alert(error)
       }
     )
   }
