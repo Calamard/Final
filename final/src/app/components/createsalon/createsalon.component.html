@@ -1,56 +1,45 @@
 <div class="container col-xl-6">
     <div class="card">
         <div class="card-header">
-            <h3>Create SalonRoom</h3>
+            <h3>Crea tu sala</h3>
         </div>
           <div class="card-body">
             <form action="">
                 <div class="form-group">
-                    <label for="">Name</label>
+                    <label for="">Nombre</label>
                     <input type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Capacity</label>
+                  <label for="exampleFormControlTextarea1">Capacidad</label>
                   <input type="number" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Place</label>
+                    <label for="exampleFormControlTextarea1">Lugar</label>
                     <input type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Adress</label>
+                    <label for="exampleFormControlTextarea1">Dirección</label>
                     <input type="text" class="form-control">
                 </div>
                 <div class="form-row">
                     
+                    
                     <div class="col-4">
-                        <label for="exampleFormControlTextarea2">Country</label>
-                    </div>
-                    <div class="col-4">
-                        <label for="exampleFormControlTextarea2">City</label>
+                        <label for="exampleFormControlTextarea2">Ciudad</label>
                     </div>
                     
                 </div>            
                 <div class="form-row">   
                     <div class="col-4">
-                        <select name="Country" class="form-control">
-                            <option value="eve1" selected >Country 1</option>
-                            <option value="eve2">Country 2</option>
-                            <option value="eve3">Country 3</option>
-                            <option value="eve4">Country 4</option>
-                          </select>
-                    </div>
-                    <div class="col-4">
                         <select name="City" class="form-control">
-                            <option value="eve1" selected >City 1</option>
-                            <option value="eve2">City 2</option>
-                            <option value="eve3">City 3</option>
-                            <option value="eve4">City 4</option>
+                            <option value="eve1" selected >Santiago</option>
+                            
                           </select>
                     </div>                   
                 </div> 
                 <br>
-                  <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Create</button>
+                <a href="http://localhost4200/event">
+                  <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Crear</button></a>
             </form>
           </div>
     </div>

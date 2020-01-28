@@ -34,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'talkform',component:TalkformComponent},
   { path: 'speakerform',component:SpeakerformComponent},
   { path: 'salonform',component:SalonformComponent},
+  { path: 'start',component:StartComponent},
   
   {
     path: 'event',

@@ -1,28 +1,28 @@
 <div class="container col-xl-6">
     <div class="card">
         <div class="card-header">
-            <h3>Create your talk</h3>
+            <h3>Crea tu Charla</h3>
         </div>
           <div class="card-body">
             <form action="">
                 <div class="form-group">
-                    <label for="">Name</label>
+                    <label for="">Nombre</label>
                     <input type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Description</label>
+                  <label for="exampleFormControlTextarea1">Descripcion</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="form-row">
                     
                     <div class="col-4">
-                        <label for="exampleFormControlTextarea2">Event</label>
+                        <label for="exampleFormControlTextarea2">Evento</label>
                     </div>
                     <div class="col-4">
-                        <label for="exampleFormControlTextarea2">Speaker</label>
+                        <label for="exampleFormControlTextarea2">Orador</label>
                     </div>
                     <div class="col-2">
-                        <label for="exampleFormControlTextarea2">Duration</label>
+                        <label for="exampleFormControlTextarea2">Duracion</label>
                     </div>  
                 </div>            
                 <div class="form-row">
@@ -30,18 +30,16 @@
                     
                     <div class="col-4">
                         <select name="Events" class="form-control">
-                            <option value="eve1" selected >Event 1</option>
-                            <option value="eve2">Event 2</option>
-                            <option value="eve3">Event 3</option>
-                            <option value="eve4">Event 4</option>
+                            <option value="eve1" selected >Big Data</option>
+                            <option value="eve2">Futuro Presente</option>
+                            <option value="eve2">Modelos predictivos de accidentes</option>
                           </select>
                     </div>
                     <div class="col-4">
                         <select name="Speakers" class="form-control">
-                            <option value="eve1" selected >Speaker 1</option>
-                            <option value="eve2">Speaker 2</option>
-                            <option value="eve3">Speaker 3</option>
-                            <option value="eve4">Speaker 4</option>
+                            <option value="eve1" selected >Richard Weber</option>
+                            <option value="eve2">Alfredo Barriga</option>
+                            <option value="eve3">Leonardo Basso</option>
                           </select>
                     </div>
                     <div class="col-2">
@@ -53,34 +51,32 @@
                 <br>
                 <div class="form-row">
                     <div class="col-4">
-                        <label for="exampleFormControlTextarea2">Category</label>
+                        <label for="exampleFormControlTextarea2">Categoria</label>
                     </div>  
                     <div class="col-4">
-                        <label for="exampleFormControlTextarea2">SalonRoom</label>
+                        <label for="exampleFormControlTextarea2">Sala</label>
                     </div>
                 </div>   
                 <div class="form-row">
                     
                     <div class="col-4">
                         <select name="Categories" class="form-control">
-                            <option value="eve1" selected >Category 1</option>
-                            <option value="eve2">Category 2</option>
-                            <option value="eve3">Category 3</option>
-                            <option value="eve4">Category 4</option>
+                            <option value="eve1" selected >Inteligencia Artificial</option>
+                            <option value="eve2">Sistema Android</option>
+                            <option value="eve3">Realidad Virtual</option>
                           </select>
                     </div>
                     <div class="col-4">
                         <select name="SalonRooms" class="form-control">
-                            <option value="eve1" selected >SalonRoom 1</option>
-                            <option value="eve2">SalonRoom 2</option>
-                            <option value="eve3">SalonRoom 3</option>
-                            <option value="eve4">SalonRoom 4</option>
+                            <option value="eve1" selected >Facultad de Ciencias y Matematicas</option>
+                            <option value="eve2">Sala ñuñoa</option>
+                            <option value="eve3">Sala San Joaquin</option>
                           </select>
                     </div>
                 </div>          
                 <br>     
-                  
-                  <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Create</button>
+                <a href="http://localhost4200/talkform">
+                    <button id="btncreate" (click)="Create()" class="btn btn-danger" style="margin-left:auto;">Crear</button></a>
             </form>
           </div>
     </div>
