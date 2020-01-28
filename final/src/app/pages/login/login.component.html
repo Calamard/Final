@@ -15,20 +15,20 @@
     <div class="col-4 login-pane" align="lefth">
             <h2>Login</h2>
         <div class="form-group">
-            <label for="exampleDropdownFormEmail2">Email address</label>
-            <input (keyup)="emailKeyup($event.target.value)" type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+            <label for="exampleDropdownFormEmail2">Email</label>
+            <input (keyup)="emailKeyup($event.target.value)" type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
         </div>
         <div class="form-group">
-            <label for="exampleDropdownFormPassword2">Password</label>
-            <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+            <label for="exampleDropdownFormPassword2">Contraseña</label>
+            <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="contraseña">
         </div>
-        
-        <button (click)="validateSession()" class="btn btn-primary">Sign in</button>
+        <a href="http://localhost:4200/event">
+        <button class="btn btn-primary">Ingresar</button></a>
         
 
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="">Forgot password?</a>
-        <a class="dropdown-item" href="http://localhost:4200/sigin-up">New around here? Sign up</a>
+        <a class="dropdown-item" href="http://localhost:4200/">¿Olvidas tu contraseña?</a>
+        <a class="dropdown-item" href="http://localhost:4200/sigin-up">¿Eres nuevo por aqui? Registrate ;)</a>
         
     </div>
 
